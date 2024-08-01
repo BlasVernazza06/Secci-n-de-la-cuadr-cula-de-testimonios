@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-moderate-violet: hsl(263, 55%, 52%);
+    --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-gray: hsl(0, 0%, 81%);
+    --color-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body{
+    background-color: var(--color-light-grayish-blue);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 100px;
+}
+
+.cards{
+    display: grid;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5"
+    ;
+    grid-template-columns: 283px 400px 310px 340px;
+    grid-template-rows: 320px 320px;
+    padding: 20px;
+    height: 100%;
+    gap: 30px;
+    
+}
+
+@media (max-width: 375px) {
+    .cards{
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        ;
+        grid-template-columns: 300px;
+        grid-template-rows: 600px 320px 300px 550px 670px;
+    }
+}
+
+.card{
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 45px 1px var(--color-light-gray);
+}
+
+.card header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.card img{
+    width: 30px;
+    height: 30px;
+    border-radius: 80px;
+}
+
+.card .degree{
+    font-weight: 500;
+    opacity: 50%;
+    color: var(--color-light-gray);
+}
+
+.card .paragraph{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.card .subparagraph{
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 70%;
+    color: var(--color-light-gray);
+}
+
+
+
+
+
+.card1{
+    grid-area: card1;
+    background-color: var(--color-moderate-violet);
+}
+
+.card1 header img{
+    border: 2px solid var(--color-moderate-violet);
+}
+
+.card1 header .text .name{
+    color: var(--color-white);
+}
+
+.card1 .text .paragraph{
+    color: var(--color-white);
+}
+
+
+
+
+
+
+
+.card2{
+    grid-area: card2;
+    background-color: var(--color-very-dark-grayish-blue);
+}
+
+.card2 header .text .name{
+    color: var(--color-white);
+}
+
+.card2 .paragraph{
+    color: var(--color-white);
+}
+
+
+
+.card3{
+    grid-area: card3;
+    background-color: var(--color-white);
+}
+
+.card3 header .text .name{
+    font-weight: 500;
+    color: var(--color-very-dark-grayish-blue);
+}
+
+
+.card3 .paragraph{
+    color: var(--color-very-dark-grayish-blue);
+}
+
+
+
+
+
+
+.card4{
+    grid-area: card4;
+    background-color: var(--color-very-dark-blackish-blue);
+}
+
+.card4 header .text .name{
+    color: var(--color-white);
+}
+
+.card4 .paragraph{
+    color: var(--color-white);
+}
+
+.card4 header img{
+    border: 3px solid var(--color-moderate-violet);
+}
+
+
+
+.card5{
+    grid-area: card5;
+    background-color: var(--color-white);
+}
+
+.card5 header .text .name{
+    font-weight: 500;
+    color: var(--color-very-dark-grayish-blue);
+}
+
+.card5 .paragraph{
+    color: var(--color-very-dark-grayish-blue);
+}
